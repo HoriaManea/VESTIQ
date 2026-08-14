@@ -18,7 +18,6 @@ export default function ContactPage() {
       </div>
 
       <div className="mt-16 grid gap-16 md:grid-cols-2">
-        {/* Info column */}
         <div className="flex flex-col gap-10">
           <div>
             <h2 className="text-xs tracking-[0.2em] text-muted-foreground">
@@ -51,7 +50,6 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Contact form — UI only, not wired up to any submit logic */}
         <div className="flex flex-col gap-5">
           <FieldGroup>
             <Field>
