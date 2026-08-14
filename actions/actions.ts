@@ -78,11 +78,11 @@ export async function login(prevState: any, formData: FormData) {
     where: { email },
   })
 
-  if (!user) return { error: "Invalid email or email" }
+  if (!user) return { error: "Invalid email or password" }
 
   const valid = await bcrypt.compare(password, user.password)
 
-  if (!valid) return { error: "Invalid email or email" }
+  if (!valid) return { error: "Invalid email or password" }
 
   await createSession(user.id)
 
