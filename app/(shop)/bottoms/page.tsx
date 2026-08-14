@@ -5,7 +5,6 @@ import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import { Funnel } from "lucide-react"
 import { Field } from "@/components/ui/field"
 import ButtonReusable from "@/components/ui/Button/button-reusable"
-import FilterModal from "@/components/ui/filter-modal"
 import Products from "@/components/products"
 import ProductsPagination from "@/components/products-pagination"
 import { SearchInput } from "@/components/ui/seach-input"
@@ -33,19 +32,12 @@ export default async function Page(props: {
           </Field>
         </div>
         <div className="flex flex-col p-6">
-          <div className="h-14 w-full">
-            <ButtonReusable>
-              <Funnel size={18} strokeWidth={2} />
-              FILTER & SORT
-            </ButtonReusable>
-          </div>
           <Products
             query={query}
             currentPage={currentPage}
             productCategory="bottoms"
           />
         </div>
-        <FilterModal />
         <ProductsPagination />
       </SidebarInset>
     </SidebarProvider>

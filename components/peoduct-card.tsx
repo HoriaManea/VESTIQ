@@ -85,8 +85,6 @@ export function ProductCardHeader() {
 }
 
 export function ProductCardFooter() {
-  const { product } = useProductCardContext()
-
   return (
     <CardFooter>
       <Button className="w-full">View Event</Button>

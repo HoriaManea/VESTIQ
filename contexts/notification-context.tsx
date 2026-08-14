@@ -16,15 +16,25 @@ export default function NotificationProvider({
 }: {
   children: ReactNode
 }) {
-  const [showNotification, setShowNotification] = useState(true)
+  const [showNotification, setShowNotification] = useState(false)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+   const dimissed = localStorage.getItem("showNotification");
+
+    if(!dimissed) {
+      setShowNotification(true)
+    }
+
+
     setMounted(true)
   }, [])
 
+ 
+
   function handleCloseNotification() {
-    setShowNotification(false)
+    setShowNotification(false);
+    localStorage.setItem("showNotification", "true")
   }
 
   return (

@@ -2,7 +2,6 @@ import { Geist_Mono, Inter } from "next/font/google"
 import { ModalProvider } from "@/contexts/modal-context"
 
 import "../../globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
@@ -29,9 +28,7 @@ export default function RootLayout({
       )}
     >
       <body>
-        <ModalProvider>
-          <ThemeProvider>{children}</ThemeProvider>
-        </ModalProvider>
+        <ModalProvider>{children}</ModalProvider>
       </body>
     </html>
   )

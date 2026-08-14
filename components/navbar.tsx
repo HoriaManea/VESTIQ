@@ -9,7 +9,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { useCart } from "@/contexts/cart-contex"
-import { User, ShoppingCart } from "lucide-react"
+import { ShoppingCart } from "lucide-react"
 import Link from "next/link"
 
 export default function Navbar() {
@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <div className="align-center mt-3 flex flex-row items-center justify-between pr-6 pl-6">
-      <Link href={"denim"}>
+      <Link href={"/denim"}>
         <span className="flex items-center gap-1 text-xl font-semibold tracking-tight">
           VESTIQ<span className="text-primary">.</span>
         </span>
@@ -72,7 +72,7 @@ export default function Navbar() {
       </NavigationMenu>
       <div className="relative flex flex-row gap-4">
         {cartProductsCount ? (
-          <div className="color-white absolute top-[-12] right-7 w-5 rounded-full border bg-red-500 text-center text-xs">
+          <div className="absolute top-[-12] left-4 w-5 rounded-full border bg-red-500 text-center text-[11px] text-white">
             {cartProductsCount}
           </div>
         ) : (
@@ -85,10 +85,6 @@ export default function Navbar() {
           size={25}
           strokeWidth={1}
         />
-
-        <Link href={"user"}>
-          <User size={25} strokeWidth={1} />
-        </Link>
       </div>
     </div>
   )

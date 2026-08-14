@@ -11,6 +11,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { signUp } from "@/actions/actions"
 import { useActionState } from "react"
+import Link from "next/link"
 
 export function SignupForm({
   className,
@@ -88,8 +89,9 @@ export function SignupForm({
         </Field>
         <Field>
           <FieldDescription className="px-6 text-center">
-            Already have an account? <a href="#">Sign in</a>
+            Already have an account? <Link href={'/login'}>Sign in</Link>
           </FieldDescription>
+          
         </Field>
       </FieldGroup>
     </form>

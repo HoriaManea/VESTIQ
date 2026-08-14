@@ -24,12 +24,6 @@ const signUpSchema = z.object({
     .min(8, { message: "Password must be at least 8 characters" }),
 })
 
-export async function filter(formData: FormData) {
-  const category = formData.get("category")?.toString()
-  const size = formData.get("size")?.toString()
-  const sort = formData.get("sort")?.toString()
-}
-
 export async function signUp(prevState: any, formData: FormData) {
   const result = signUpSchema.safeParse(Object.fromEntries(formData))
 
