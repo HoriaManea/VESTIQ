@@ -20,20 +20,17 @@ export default function NotificationProvider({
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-   const dimissed = localStorage.getItem("showNotification");
+    const dimissed = localStorage.getItem("showNotification")
 
-    if(!dimissed) {
+    if (!dimissed) {
       setShowNotification(true)
     }
-
 
     setMounted(true)
   }, [])
 
- 
-
   function handleCloseNotification() {
-    setShowNotification(false);
+    setShowNotification(false)
     localStorage.setItem("showNotification", "true")
   }
 
@@ -58,7 +55,7 @@ export default function NotificationProvider({
                   <p className="mb-6 text-sm tracking-[0.45em]">MNML</p>
 
                   <p className="mb-2 text-xs font-medium tracking-wide">
-                    WELCOME TO MNML
+                    WELCOME TO VESTIQ
                   </p>
 
                   <h2 className="text-4xl font-bold tracking-tight">
