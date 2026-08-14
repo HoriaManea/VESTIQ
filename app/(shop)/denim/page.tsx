@@ -2,9 +2,7 @@ import React from "react"
 
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 
-import { Funnel } from "lucide-react"
 import { Field } from "@/components/ui/field"
-import ButtonReusable from "@/components/ui/Button/button-reusable"
 import Products from "@/components/products"
 import ProductsPagination from "@/components/products-pagination"
 import { SearchInput } from "@/components/ui/seach-input"
